@@ -1,0 +1,41 @@
+commit faafa39da2aa74e7df454b5cf7536232c27a3dc8
+Author: Ignacio Estrada Cavero <ire2@cornell.edu>
+Date:   Tue Oct 22 23:02:23 2024 -0400
+
+    added headibgs to files, added more tests for at leadt 90% coverage
+
+commit c9d6a0116a75a8fc3f5e542c06060df296247086
+Author: Ignacio Estrada Cavero <ire2@cornell.edu>
+Date:   Tue Oct 22 22:49:15 2024 -0400
+
+    Added the main driver logic, which is the terminal output of the PQ system implemented it using Ansi code for added UI
+
+commit 2a88631beda5d3e4ceafdbda71fe3b92b1ac9452
+Author: Ignacio Estrada Cavero <ire2@cornell.edu>
+Date:   Tue Oct 22 21:19:40 2024 -0400
+
+    added more coverage tests for priorityQueue
+
+commit 70df3373d21cda5f7af824265ed68e761a875412
+Author: Ignacio Estrada Cavero <ire2@cornell.edu>
+Date:   Tue Oct 22 21:09:05 2024 -0400
+
+    fixed dune errors, added test cases for Task 3 wich include Patient
+
+commit 761e3fd77e13219a7182cfdff5fa70dab498ae4f
+Author: Ignacio Estrada Cavero <ire2@cornell.edu>
+Date:   Tue Oct 22 20:48:31 2024 -0400
+
+    task 2, patient compilation unit, base case
+
+commit c987a3a1dfa9181916ecf232bf2ef1f6e77b18c0
+Author: Ignacio Estrada Cavero <ire2@cornell.edu>
+Date:   Tue Oct 22 20:14:25 2024 -0400
+
+    Completed Task 2 : Implemented MakeListPq
+
+commit 433cce4d6b1b615a1c5eb20267f94c05b679eb7e
+Author: Ignacio Estrada Cavero <ire2@cornell.edu>
+Date:   Tue Oct 22 19:19:24 2024 -0400
+
+    git init commit

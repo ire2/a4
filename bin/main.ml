@@ -91,7 +91,11 @@ let treat pq =
        ^ Patient.diagnosis patient ^ ".");
       PatientTreePQ.dequeue pq
 
-(**main loop *)
+(**main loop Adapted from:
+   https://manuraj.dev/posts/ocaml-matching-in-recursive-function/ Code adapted:
+   let parts = String.split_on_char ' ' input in match parts with | ["a"; v] ->
+   v :: list | ["p"] -> print_and_return_list list | ["q"] -> exit 0 | _ ->
+   (print_endline "Invalid input"; list) *)
 let rec loop pq =
   print_string "\n\x1b[1mEnter command (lower-case): \n";
   print_string "\x1b[1m  areview\n";
@@ -127,10 +131,10 @@ let () =
   let pq =
     if Array.length Sys.argv > 1 then (
       let file = Sys.argv.(1) in
-      print_endline ("Loading patients from " ^ file ^ "...");
+      print_endline ("Loading patients from: " ^ file);
       load_from_csv file)
     else (
-      print_endline "Starting with an empty waiting room...";
+      print_endline "Starting with an empty waiting room";
       PatientTreePQ.empty)
   in
   loop pq

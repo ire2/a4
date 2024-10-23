@@ -9,7 +9,9 @@ let create name diagnosis =
   match diagnosis with
   | "Appendicitis" | "Sprain" | "Flu" -> { name; diagnosis }
   | _ ->
-      failwith "Invalid diagnosis! Must be 'Appendicitis', 'Sprain', or 'Flu'."
+      failwith
+        "Invalid Diagnosius Entered! Must be 'Appendicitis', 'Sprain', or \
+         'Flu'."
 
 let name patient = patient.name
 let diagnosis patient = patient.diagnosis
