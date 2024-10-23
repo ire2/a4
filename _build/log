@@ -1,6 +1,297 @@
-# dune init proj a4
+# dune build --watch
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Shared cache location: /Users/ignacioestrada/.cache/dune/db
 # Workspace root: /Users/ignacioestrada/cs3110/a4
 # Auto-detected concurrency: 12
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -config > /var/folders/pq/0dz_zxjj4zgb8wlzxwc28rlw0000gn/T/dune_f69154_output
+# Promoting "_build/default/a4.opam" to "a4.opam"
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -o lib/.a4.objs/byte/a4.cmo -c -impl lib/a4.ml-gen)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.test_a4.eobjs/byte -no-alias-deps -opaque -o test/.test_a4.eobjs/byte/dune__exe__Test_a4.cmi -c -intf test/test_a4.mli)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cma lib/.a4.objs/byte/a4.cmo lib/.a4.objs/byte/a4__PriorityQueues.cmo)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -open A4 -o lib/.a4.objs/native/a4__PriorityQueues.cmx -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_a4.eobjs/byte -I test/.test_a4.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.test_a4.eobjs/native/dune__exe__Test_a4.cmx -c -impl test/test_a4.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o lib/.a4.objs/native/a4.cmx -c -impl lib/a4.ml-gen)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cmxa lib/.a4.objs/native/a4.cmx lib/.a4.objs/native/a4__PriorityQueues.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/a4.cmxs lib/a4.cmxa)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/test_a4.exe test/.test_a4.eobjs/native/dune__exe__Test_a4.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/a4.cmxa /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str/str.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -open A4 -o lib/.a4.objs/native/a4__PriorityQueues.cmx -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cma lib/.a4.objs/byte/a4.cmo lib/.a4.objs/byte/a4__PriorityQueues.cmo)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -open A4 -o lib/.a4.objs/native/a4__PriorityQueues.cmx -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cmxa lib/.a4.objs/native/a4.cmx lib/.a4.objs/native/a4__PriorityQueues.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/a4.cmxs lib/a4.cmxa)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/a4.cmxa /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str/str.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cma lib/.a4.objs/byte/a4.cmo lib/.a4.objs/byte/a4__PriorityQueues.cmo)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -open A4 -o lib/.a4.objs/native/a4__PriorityQueues.cmx -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cmxa lib/.a4.objs/native/a4.cmx lib/.a4.objs/native/a4__PriorityQueues.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/a4.cmxs lib/a4.cmxa)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/a4.cmxa /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str/str.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 58, characters 0-0:
+> Error: Syntax error: 'end' expected
+> File "lib/priorityQueues.ml", line 52, characters 76-82:
+> 52 | module MakeListPQ (T : Prioritizable) : PriorityQueue with type elt = T.t = struct
+>                                                                                  ^^^^^^
+>   This 'struct' might be unmatched
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 56, characters 0-0:
+> Error: Syntax error: 'end' expected
+> File "lib/priorityQueues.ml", line 50, characters 76-82:
+> 50 | module MakeListPQ (T : Prioritizable) : PriorityQueue with type elt = T.t = struct
+>                                                                                  ^^^^^^
+>   This 'struct' might be unmatched
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+> File "lib/priorityQueues.ml", lines 50-56, characters 76-3:
+> 50 | ............................................................................struct
+> 51 |   type elt = T.t
+> 52 | 
+> 53 |   (* AF: fill in. *)
+> 54 |   (* RI: fill in. *)
+> 55 |   type t = elt list
+> 56 | end.
+> Error: Signature mismatch:
+>        ...
+>        The exception `Empty' is required but not provided
+>        File "lib/priorityQueues.ml", line 15, characters 2-17:
+>          Expected declaration
+>        The value `empty' is required but not provided
+>        File "lib/priorityQueues.ml", line 18, characters 2-15:
+>          Expected declaration
+>        The value `is_empty' is required but not provided
+>        File "lib/priorityQueues.ml", line 21, characters 2-26:
+>          Expected declaration
+>        The value `enqueue' is required but not provided
+>        File "lib/priorityQueues.ml", line 24, characters 2-29:
+>          Expected declaration
+>        The value `front' is required but not provided
+>        File "lib/priorityQueues.ml", line 27, characters 2-22:
+>          Expected declaration
+>        The value `dequeue' is required but not provided
+>        File "lib/priorityQueues.ml", line 30, characters 2-22:
+>          Expected declaration
+>        The value `to_list' is required but not provided
+>        File "lib/priorityQueues.ml", line 34, characters 2-29:
+>          Expected declaration
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 55, characters 0-0:
+> Error: Syntax error: 'end' expected
+> File "lib/priorityQueues.ml", line 50, characters 76-82:
+> 50 | module MakeListPQ (T : Prioritizable) : PriorityQueue with type elt = T.t = struct
+>                                                                                  ^^^^^^
+>   This 'struct' might be unmatched
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+> File "lib/priorityQueues.ml", lines 50-55, characters 76-3:
+> 50 | ............................................................................struct
+> 51 |   type elt = T.t
+> 52 | (* AF: A list `t` represents a priority queue where the elements are ordered according to their priority. *)
+> 53 |  (* RI: The list `t` is sorted in non-decreasing order of priority. *)
+> 54 |   type t = elt list
+> 55 | end
+> Error: Signature mismatch:
+>        ...
+>        The exception `Empty' is required but not provided
+>        File "lib/priorityQueues.ml", line 15, characters 2-17:
+>          Expected declaration
+>        The value `empty' is required but not provided
+>        File "lib/priorityQueues.ml", line 18, characters 2-15:
+>          Expected declaration
+>        The value `is_empty' is required but not provided
+>        File "lib/priorityQueues.ml", line 21, characters 2-26:
+>          Expected declaration
+>        The value `enqueue' is required but not provided
+>        File "lib/priorityQueues.ml", line 24, characters 2-29:
+>          Expected declaration
+>        The value `front' is required but not provided
+>        File "lib/priorityQueues.ml", line 27, characters 2-22:
+>          Expected declaration
+>        The value `dequeue' is required but not provided
+>        File "lib/priorityQueues.ml", line 30, characters 2-22:
+>          Expected declaration
+>        The value `to_list' is required but not provided
+>        File "lib/priorityQueues.ml", line 34, characters 2-29:
+>          Expected declaration
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 57, characters 27-27:
+> Error: Syntax error: 'end' expected
+> File "lib/priorityQueues.ml", line 50, characters 76-82:
+> 50 | module MakeListPQ (T : Prioritizable) : PriorityQueue with type elt = T.t = struct
+>                                                                                  ^^^^^^
+>   This 'struct' might be unmatched
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 64, characters 4-4:
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 66, characters 0-0:
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 67, characters 2-5:
+> 67 |   let front t = function
+>        ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 67, characters 2-5:
+> 67 |   let front q = function
+>        ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 69, characters 4-9:
+> 69 |     match q with
+>          ^^^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 69, characters 4-9:
+> 69 |     match q with
+>          ^^^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 77, characters 0-0:
+> Error: Syntax error: 'end' expected
+> File "lib/priorityQueues.ml", line 50, characters 76-82:
+> 50 | module MakeListPQ (T : Prioritizable) : PriorityQueue with type elt = T.t = struct
+>                                                                                  ^^^^^^
+>   This 'struct' might be unmatched
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+> File "lib/priorityQueues.ml", line 78, characters 0-0:
+> Error: Syntax error: 'end' expected
+> File "lib/priorityQueues.ml", line 50, characters 76-82:
+> 50 | module MakeListPQ (T : Prioritizable) : PriorityQueue with type elt = T.t = struct
+>                                                                                  ^^^^^^
+>   This 'struct' might be unmatched
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+> File "lib/priorityQueues.ml", line 66, characters 6-7:
+> 66 |     | _ -> failwith "This should never happen"
+>            ^
+> Error (warning 11 [redundant-case]): this match case is unused.
+>
+> File "lib/priorityQueues.ml", lines 50-78, characters 76-5:
+> 50 | ............................................................................struct
+> 51 |   type elt = T.t
+> 52 | (* AF: A list `t` represents a priority queue where the elements are ordered according to their priority. *)
+> 53 |  (* RI: The list `t` is sorted in non-decreasing order of priority. *)
+> 54 |   type t = elt list
+> ...
+> 75 |     | _::tl -> tl
+> 76 | 
+> 77 |     let to_list q = q
+> 78 |   end.
+> Error: Signature mismatch:
+>        ...
+>        Values do not match:
+>          val dequeue : 'a -> 'b list -> 'b list
+>        is not included in
+>          val dequeue : t -> t
+>        The type t -> 'a list -> 'a list is not compatible with the type
+>          t -> t
+>        Type 'a list -> 'a list is not compatible with type t = elt list
+>        File "lib/priorityQueues.ml", line 30, characters 2-22:
+>          Expected declaration
+>        File "lib/priorityQueues.ml", line 73, characters 8-15:
+>          Actual declaration
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+> File "lib/priorityQueues.ml", line 66, characters 6-7:
+> 66 |     | _ -> failwith "This should never happen"
+>            ^
+> Error (warning 11 [redundant-case]): this match case is unused.
+>
+> File "lib/priorityQueues.ml", lines 50-78, characters 76-5:
+> 50 | ............................................................................struct
+> 51 |   type elt = T.t
+> 52 | (* AF: A list `t` represents a priority queue where the elements are ordered according to their priority. *)
+> 53 |  (* RI: The list `t` is sorted in non-decreasing order of priority. *)
+> 54 |   type t = elt list
+> ...
+> 75 |     | _::tl -> tl
+> 76 | 
+> 77 |     let to_list q = q
+> 78 |   end.
+> Error: Signature mismatch:
+>        ...
+>        Values do not match:
+>          val dequeue : 'a -> 'b list -> 'b list
+>        is not included in
+>          val dequeue : t -> t
+>        The type t -> 'a list -> 'a list is not compatible with the type
+>          t -> t
+>        Type 'a list -> 'a list is not compatible with type t = elt list
+>        File "lib/priorityQueues.ml", line 30, characters 2-22:
+>          Expected declaration
+>        File "lib/priorityQueues.ml", line 73, characters 8-15:
+>          Actual declaration
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+> File "lib/priorityQueues.ml", line 66, characters 6-7:
+> 66 |     | _ -> failwith "This should never happen"
+>            ^
+> Error (warning 11 [redundant-case]): this match case is unused.
+[2]
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cma lib/.a4.objs/byte/a4.cmo lib/.a4.objs/byte/a4__PriorityQueues.cmo)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -open A4 -o lib/.a4.objs/native/a4__PriorityQueues.cmx -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cmxa lib/.a4.objs/native/a4.cmx lib/.a4.objs/native/a4__PriorityQueues.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/a4.cmxs lib/a4.cmxa)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/a4.cmxa /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str/str.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cma lib/.a4.objs/byte/a4.cmo lib/.a4.objs/byte/a4__PriorityQueues.cmo)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -open A4 -o lib/.a4.objs/native/a4__PriorityQueues.cmx -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cmxa lib/.a4.objs/native/a4.cmx lib/.a4.objs/native/a4__PriorityQueues.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/a4.cmxs lib/a4.cmxa)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/a4.cmxa /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str/str.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamldep.opt -modules -impl lib/priorityQueues.ml) > _build/default/lib/.a4.objs/a4__PriorityQueues.impl.d
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.a4.objs/byte -no-alias-deps -opaque -open A4 -o lib/.a4.objs/byte/a4__PriorityQueues.cmo -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cma lib/.a4.objs/byte/a4.cmo lib/.a4.objs/byte/a4__PriorityQueues.cmo)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -open A4 -o lib/.a4.objs/native/a4__PriorityQueues.cmx -c -impl lib/priorityQueues.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/a4.cmxa lib/.a4.objs/native/a4.cmx lib/.a4.objs/native/a4__PriorityQueues.cmx)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/a4.cmxs lib/a4.cmxa)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str -I lib/.a4.objs/byte -I lib/.a4.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/ignacioestrada/.opam/cs3110-2024sp/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/a4.cmxa /Users/ignacioestrada/.opam/cs3110-2024sp/lib/ocaml/str/str.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
