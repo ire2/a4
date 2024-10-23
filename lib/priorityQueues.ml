@@ -85,3 +85,47 @@ struct
 
   let to_list q = q
 end
+
+module MakeTreePQ (T : Prioritizable) : PriorityQueue with type elt = T.t =
+struct
+  type elt = T.t
+
+  (* AF: A vinary tree `t` represents a priority queue where the elements are
+     ordered according to their priority. The root of the tree is assummed to be
+     the item of the highest priority *)
+  (* RI: For any 'node([elt],[leaf],[leaf])' in the tree the prority of 'elt' is
+     greater than or equal to the priority of the leaves *)
+  type t =
+    | Leaf
+    | Node of elt * t * t
+
+  exception Empty
+
+  let empty = Leaf
+
+  let is_empty = function
+    | Leaf -> true
+    | _ -> false
+
+  let rec merge h1 h2 =
+    match (h1, h2) with
+    | Leaf, h | h, Leaf -> h
+    | Node (x, a1, b1), Node (y, a2, b2) ->
+        if compare (T.priority x) (T.priority y) <= 0 then
+          Node (x, a1, merge b1 h2)
+        else Node (y, a2, merge h1 b2)
+
+  let rec enqueue x h = merge h (Node (x, Leaf, Leaf))
+
+  let front = function
+    | Leaf -> raise Empty
+    | Node (x, _, _) -> x
+
+  let dequeue = function
+    | Leaf -> raise Empty
+    | Node (_, l, r) -> merge l r
+
+  let rec to_list = function
+    | Leaf -> []
+    | Node (x, l, r) -> x :: to_list (merge l r)
+end

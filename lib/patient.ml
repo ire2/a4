@@ -5,17 +5,18 @@ type t = {
   diagnosis : string;
 }
 
-(* Constructor function to create a new patient *)
-let create name diagnosis = { name; diagnosis }
+let create name diagnosis =
+  match diagnosis with
+  | "Appendicitis" | "Sprain" | "Flu" -> { name; diagnosis }
+  | _ ->
+      failwith "Invalid diagnosis! Must be 'Appendicitis', 'Sprain', or 'Flu'."
 
-(* Getters for patient name and diagnosis *)
 let name patient = patient.name
 let diagnosis patient = patient.diagnosis
 
-(* Define the priority based on diagnosis for triaged scheduling *)
 let priority patient =
   match patient.diagnosis with
-  | "Appendecitis" -> 3
+  | "Appendicitis" -> 1
   | "Sprain" -> 2
-  | "Flu" -> 1
+  | "Flu" -> 3
   | _ -> 0
