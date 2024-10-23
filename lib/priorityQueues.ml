@@ -1,4 +1,4 @@
-(** @author Ignacio Estrada Cavero (ire2), *)
+(** @author Ignacio Estrada Cavero (ire2), lib/priorityQueue.ml*)
 
 (** A priority queue is a data abstraction that stores elements with associated
     priorities. Elements are removed in order of priority. If elements are tied

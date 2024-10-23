@@ -1,4 +1,6 @@
 open A4
+(**@author Ignacio Estrada Cavero (ire2), bin/main.ml*)
+
 include Patient
 include PriorityQueues
 open Csv

@@ -1,4 +1,4 @@
-(* lib/patient.ml *)
+(** @author Ignacio Estrada Cavero (ire2) lib/patient.ml*)
 
 type t = {
   name : string;
