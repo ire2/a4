@@ -35,12 +35,42 @@ let test_remove_string _ =
   let result = StringPQ.to_list pq in
   assert_equal [ "world" ] result
 
+(* Test checking if the priority queue is empty *)
+let test_is_empty_string _ =
+  let pq = StringPQ.empty in
+  assert_equal true (StringPQ.is_empty pq);
+  let pq = StringPQ.enqueue "hello" pq in
+  assert_equal false (StringPQ.is_empty pq)
+
+(* Test dequeueing from an empty queue *)
+let test_dequeue_empty _ =
+  let pq = StringPQ.empty in
+  assert_raises StringPQ.Empty (fun () -> StringPQ.dequeue pq)
+
+(* Test inserting multiple elements with the same priority *)
+let test_multiple_same_priority _ =
+  let pq = StringPQ.empty in
+  let pq = StringPQ.enqueue "a" pq in
+  let pq = StringPQ.enqueue "b" pq in
+  let pq = StringPQ.enqueue "c" pq in
+  let result = StringPQ.to_list pq in
+  assert_equal [ "a"; "b"; "c" ] result
+
+(* Test front element of the priority queue *)
+let test_front_string _ =
+  let pq =
+    StringPQ.empty |> StringPQ.enqueue "hello" |> StringPQ.enqueue "world"
+  in
+  assert_equal "hello" (StringPQ.front pq)
+
 module PatientListPq = MakeListPQ (Patient)
 
+(* Function to load csv file of patients *)
 let load_patients_from_csv file =
   let csv_data = Csv.load file in
   List.map (fun row -> create (List.nth row 0) (List.nth row 1)) csv_data
 
+(* Test to make sure they loaded c orrectly in priorityQueue *)
 let test_load_patients_from_csv _ =
   let patients = load_patients_from_csv "../data/waiting_room.csv" in
   let pq =
@@ -65,6 +95,10 @@ let suite =
   >::: [
          "test_insert_and_to_list" >:: test_insert_and_to_list_string;
          "test_remove" >:: test_remove_string;
+         "test_dequeue_empty" >:: test_dequeue_empty;
+         "test_is_empty_string" >:: test_is_empty_string;
+         "test_front_string" >:: test_front_string;
+         "test_multiple_same_priority" >:: test_multiple_same_priority;
          "test_load_patients_from_csv" >:: test_load_patients_from_csv;
        ]
 
