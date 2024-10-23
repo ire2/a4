@@ -15,4 +15,7 @@ let diagnosis patient = patient.diagnosis
 (* Define the priority based on diagnosis for triaged scheduling *)
 let priority patient =
   match patient.diagnosis with
+  | "Appendecitis" -> 3
+  | "Sprain" -> 2
+  | "Flu" -> 1
   | _ -> 0

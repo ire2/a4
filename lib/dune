@@ -1,2 +1,5 @@
 (library
- (name a4))
+ (name a4)
+ (instrumentation
+  (backend bisect_ppx))
+ (libraries csv))

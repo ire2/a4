@@ -1,3 +1,5 @@
 (test
  (name test_a4)
- (libraries a4 str ounit2))
+ (libraries ounit2 a4)
+ (deps
+  (glob_files_rec ../data/*)))
