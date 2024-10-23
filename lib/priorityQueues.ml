@@ -73,11 +73,13 @@ struct
     in
     aux x q
 
-  let front = function
+  let front q =
+    match q with
     | [] -> raise Empty
     | hd :: _ -> hd
 
-  let dequeue = function
+  let dequeue q =
+    match q with
     | [] -> raise Empty
     | _ :: tl -> tl
 
